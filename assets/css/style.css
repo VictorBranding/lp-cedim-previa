@@ -99,7 +99,8 @@ figure { margin: 0; }
 .hero__title strong { display: block; font-weight: 500; }
 .hero__sign { width: min(300px, 80%); height: auto; margin: 0 0 32px; }
 .hero__media { position: relative; display: flex; justify-content: center; align-items: flex-end; margin-top: 24px; }
-.hero__pattern { position: absolute; z-index: -1; width: 112%; max-width: none; left: 50%; top: 46%; translate: -50% -50%;  opacity: .5; pointer-events: none; }
+.hero__pattern { position: absolute; z-index: -1; width: 112%; max-width: none; left: 50%; top: 46%; translate: -50% -50%;  opacity: .5; pointer-events: none; aspect-ratio: 1; }
+.hero__pattern img { position: absolute; left: 50%; top: 50%; translate: -50% -50%; height: auto; max-width: none; }
 .hero__model { position: relative; width: 100%; max-width: 560px; height: auto; }
 .hero__text { padding-top: 12px; }
 
@@ -382,7 +383,12 @@ body.has-cookies .float-whats { bottom: 170px; }
 .anim .in .w, .anim .w.in { opacity: 1; filter: none; transform: none; }
 .anim .lit .w { opacity: .28; filter: none; transform: none; transition: opacity .25s linear; transition-delay: 0s; }
 .anim .lit .w.on { opacity: 1; }
-.anim .hero__pattern { animation: pat-in 1.6s cubic-bezier(.16,.8,.24,1) .2s both, pat-spin 200s linear infinite; }
+.anim .hero__pattern { animation: pat-in 1.6s cubic-bezier(.16,.8,.24,1) .2s both; }
+
+.anim .hero__pattern img { animation: pat-spin 110s linear infinite; }
+.anim .hero__pattern img:nth-child(even) { animation-direction: reverse; }
+.anim .hero__pattern img:nth-child(3n) { animation-duration: 135s; }
+.anim .hero__pattern img:nth-child(4n+1) { animation-duration: 95s; }
 
 @keyframes pat-in { from { opacity: 0; scale: .7; } to { opacity: .5; scale: 1; } }
 @keyframes pat-spin { from { rotate: 0deg; } to { rotate: 360deg; } }
