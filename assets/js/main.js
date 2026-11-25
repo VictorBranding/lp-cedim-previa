@@ -1,4 +1,4 @@
-var GTM_ID = "GTM-PPH6ZLF2";
+var GTM_ID = "GTM-TX6X2DXD";
 
 var PIXEL_ID = "";
 
@@ -253,7 +253,7 @@ var WHATSAPP_URL = "";
 
   document.querySelectorAll(".js-whatsapp").forEach(function (a) {
     a.addEventListener("click", function () {
-      if (window.fbq) window.fbq("track", "Contact");
+      if (PIXEL_ID && window.fbq) window.fbq("track", "Contact");
       if (window.dataLayer) window.dataLayer.push({ event: "whatsapp_click" });
     });
   });
