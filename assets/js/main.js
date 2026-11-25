@@ -1,4 +1,5 @@
-var GTM_ID = "";
+var GTM_ID = "GTM-PPH6ZLF2";
+
 var PIXEL_ID = "";
 
 var WHATSAPP_URL = "";
@@ -230,6 +231,8 @@ var WHATSAPP_URL = "";
   function setChoice(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
   function loadTracking() {
+
+    if (location.hostname !== "lp.cedim.med.br") return;
     if (GTM_ID) {
       (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });

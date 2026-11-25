@@ -179,7 +179,6 @@ figure { margin: 0; }
 .quotes-sec__pattern { position: absolute; width: 1311px; max-width: none; left: -495px; top: -528px; opacity: .15; pointer-events: none; filter: saturate(.25) brightness(1.25); }
 .quotes { display: grid; gap: 14px; }
 .quote { position: relative; background: var(--white); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; min-height: 220px; }
-.quote[data-provisorio]::before { content: "texto provisório"; position: absolute; top: -10px; right: 18px; background: #fff3cd; color: #6b5300; font-size: .72rem; font-weight: 500; padding: 3px 10px; border-radius: 999px; }
 .quote blockquote { margin: 0 0 24px; font-size: 1.08rem; color: var(--ink); flex: 1; }
 .quote blockquote::before { content: "“"; } .quote blockquote::after { content: "”"; }
 .quote cite { display: flex; align-items: center; gap: 12px; font-style: normal; font-weight: 500; color: var(--teal-ink); font-size: .95rem; }
@@ -193,7 +192,6 @@ figure { margin: 0; }
 .quote__play small { display: block; font-weight: 400; font-size: .85rem; opacity: .85; }
 .quote__disc { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--red); flex: none; }
 .quote__disc svg { width: 15px; height: 15px; margin-left: 2px; }
-.quote--video a[data-pendente]::before { content: "link do YouTube pendente"; position: absolute; z-index: 2; top: 14px; left: 14px; background: #fff3cd; color: #6b5300; font-size: .72rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; }
 
 .guide { display: grid; gap: 32px; align-items: center; }
 .guide__text p { color: var(--muted); font-size: 1.04rem; }
