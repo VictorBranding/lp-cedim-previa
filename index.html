@@ -257,7 +257,7 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         <li><svg aria-hidden="true" class="guide__ico"><use href="#g-alert"/></svg>Recomendações importantes</li>
         <li><svg aria-hidden="true" class="guide__ico"><use href="#g-faq"/></svg>Dúvidas frequentes sobre cada procedimento</li>
       </ul>
-      <a class="btn" href="https://www.cedim.med.br/exames" target="_blank" rel="noopener">Ver orientações dos exames<svg aria-hidden="true" class="ico"><use href="#i-right"/></svg></a>
+      <a class="btn js-saida" data-saida="orientacoes_site" href="https://www.cedim.med.br/exames" target="_blank" rel="noopener">Ver orientações dos exames<svg aria-hidden="true" class="ico"><use href="#i-right"/></svg></a>
     </div>
   </div>
 </section>
@@ -330,10 +330,10 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         <div><dt>Sábado</dt><dd>8h às 12h</dd></div>
       </dl>
       <div class="visit__btns">
-        <a class="btn btn--outline" href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        <a class="btn btn--outline js-saida" data-saida="mapa" href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener">Abrir no Google Maps</a>
       </div>
     </div>
-    <a class="map" href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener" aria-label="Abrir a localização do CEDIM no Google Maps">
+    <a class="map js-saida" data-saida="mapa" href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener" aria-label="Abrir a localização do CEDIM no Google Maps">
       <img src="assets/img/mapa-cedim.webp" alt="Mapa com a localização do CEDIM na R. Quintino Bocaiúva, em Cacoal" loading="lazy" width="1248" height="940">
     </a>
   </div>
@@ -346,8 +346,8 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     </div>
     <ul class="footer__info">
       <li><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg><a href="tel:+556934434008">(69) 3443-4008</a></li>
-      <li><svg aria-hidden="true" class="ico"><use href="#i-pin"/></svg><a href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener">R. Quintino Bocaiúva, 2390, Sala A,<br>Jardim Clodoaldo, Cacoal (RO), 76963-694.</a></li>
-      <li><svg aria-hidden="true" class="ico"><use href="#i-insta"/></svg><a href="https://www.instagram.com/cedimcacoal" target="_blank" rel="noopener">@cedimcacoal</a></li>
+      <li><svg aria-hidden="true" class="ico"><use href="#i-pin"/></svg><a class="js-saida" data-saida="mapa" href="https://maps.app.goo.gl/LPX8UXb14MyPVhtU9" target="_blank" rel="noopener">R. Quintino Bocaiúva, 2390, Sala A,<br>Jardim Clodoaldo, Cacoal (RO), 76963-694.</a></li>
+      <li><svg aria-hidden="true" class="ico"><use href="#i-insta"/></svg><a class="js-saida" data-saida="instagram" href="https://www.instagram.com/cedimcacoal" target="_blank" rel="noopener">@cedimcacoal</a></li>
     </ul>
     <div class="footer__rt">
       <p><strong>Responsável Técnico:</strong><br>Dr. Rômulo Florêncio Tristão Santos<br>CRM/RO 4527 | RQE 2712 • 2713</p>
@@ -387,6 +387,6 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   <symbol id="g-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 21 19H3L12 3.5Z"/><path d="M12 10v4M12 16.8v.2"/></g></symbol>
   <symbol id="g-faq" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M10 9a2 2 0 1 1 2.5 1.9c-.4.1-.5.4-.5.8M12 13.3v.2"/></g></symbol>
 </svg>
-<script src="assets/js/main.js?v=8d6872d6" defer></script>
+<script src="assets/js/main.js?v=c0dadc36" defer></script>
 </body>
 </html>

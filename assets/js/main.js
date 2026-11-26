@@ -281,6 +281,13 @@ var WHATSAPP_URL = "";
     });
   });
 
+  document.querySelectorAll(".js-saida").forEach(function (a) {
+    a.addEventListener("click", function () {
+      var sec = a.closest("section, footer");
+      if (window.dataLayer) window.dataLayer.push({ event: "saida_click", destino: a.dataset.saida, botao_local: (sec && sec.id) || "rodape" });
+    });
+  });
+
   var bar = document.getElementById("cookies");
   var choice = getChoice();
   if (choice === "yes") {
