@@ -254,7 +254,15 @@ var WHATSAPP_URL = "";
   document.querySelectorAll(".js-whatsapp").forEach(function (a) {
     a.addEventListener("click", function () {
       if (PIXEL_ID && window.fbq) window.fbq("track", "Contact");
-      if (window.dataLayer) window.dataLayer.push({ event: "whatsapp_click" });
+
+      var sec = a.closest("section, footer");
+      var card = a.closest(".exam");
+      var h3 = card && card.querySelector("h3");
+      if (window.dataLayer) window.dataLayer.push({
+        event: "whatsapp_click",
+        botao_local: a.classList.contains("float-whats") ? "flutuante" : (sec && sec.id) || "rodape",
+        exame: h3 ? h3.textContent.trim() : ""
+      });
     });
   });
 
@@ -267,7 +275,10 @@ var WHATSAPP_URL = "";
   })();
 
   document.querySelectorAll(".js-results").forEach(function (a) {
-    a.addEventListener("click", function () { if (window.dataLayer) window.dataLayer.push({ event: "resultados_click" }); });
+    a.addEventListener("click", function () {
+      var sec = a.closest("section, footer");
+      if (window.dataLayer) window.dataLayer.push({ event: "resultados_click", botao_local: (sec && sec.id) || "rodape" });
+    });
   });
 
   var bar = document.getElementById("cookies");
