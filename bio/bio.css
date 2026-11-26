@@ -1,0 +1,57 @@
+.bio { position: relative; overflow: hidden; isolation: isolate; background: linear-gradient(115deg, #ffffff 0%, #fff9f2 100%); padding: 28px 20px 40px; }
+.bio .hero__bg { height: 480px; -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent); }
+.bio__in { max-width: 480px; margin: 0 auto; }
+.bio__head { text-align: center; position: relative; z-index: 1; }
+.bio__logo { width: 170px; margin: 0 auto 20px; }
+.bio__title { margin: 0 auto; max-width: 12.5em; font-size: clamp(1.5rem, 6.4vw, 1.9rem); line-height: 1.16; letter-spacing: -.015em; font-weight: 400; color: var(--teal); }
+.bio__title strong { font-weight: 500; }
+.bio__media { position: relative; height: 232px; margin-top: 12px; }
+.bio__media .hero__pattern { width: 276px; top: 59%; }
+.bio__model { position: absolute; left: 50%; top: 0; width: 300px; max-width: none; translate: -50% 0; clip-path: inset(0 0 40px); }
+
+.links { position: relative; z-index: 2; display: grid; gap: 12px; }
+.link { display: flex; align-items: center; gap: 14px; min-height: 68px; padding: 10px 18px 10px 12px; border-radius: 999px; background: #fff; color: var(--teal-ink); text-decoration: none; line-height: 1.25; box-shadow: 0 6px 18px rgba(11,79,79,.12); transition: background .2s, color .2s, transform .2s; }
+.link__ico { display: grid; place-items: center; width: 46px; height: 46px; flex: none; border-radius: 50%; background: var(--teal-soft); color: var(--teal); }
+.link__ico .ico { width: 24px; height: 24px; }
+.link__txt { flex: 1; }
+.link__txt strong { font-weight: 500; white-space: nowrap; }
+.link__go { width: 18px; height: 18px; opacity: .7; transition: transform .2s; }
+.link--main { background: var(--red); color: #fff; font-size: 1.05rem; }
+.link--main .link__ico { background: #fff; color: var(--red); }
+.link--teal { background: var(--teal); color: #fff; font-size: 1.05rem; }
+.link--teal .link__ico { background: #fff; }
+.link:focus-visible { border-radius: 999px; }
+.link:active { transform: scale(.98); }
+@media (hover: hover) {
+  .link:hover { transform: translateY(-2px); background: var(--teal-soft); }
+  .link--main:hover { background: var(--red-dark); }
+  .link--teal:hover { background: var(--teal-dark); }
+  .link:hover .link__go { transform: translateX(3px); }
+}
+
+.bio__foot { padding: 32px 20px 36px; text-align: center; font-size: .9rem; }
+.bio__foot p { margin: 0 0 18px; }
+.social { display: flex; justify-content: center; gap: 12px; margin-bottom: 22px; }
+.social a { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 2px solid rgba(255,255,255,.45); transition: background .2s, border-color .2s; }
+.social a:hover { background: var(--red); border-color: var(--red); }
+.bio__foot .bio__copy { display: grid; justify-items: center; gap: 12px; max-width: 480px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,.14); padding-top: 18px; font-size: .82rem; color: rgba(255,255,255,.8); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .bio__head, .bio__model, .links li { animation: bio-in .8s cubic-bezier(.16,.8,.24,1) both; }
+  .links li { animation-delay: calc(.1s + var(--n, 0) * .07s); }
+  .links li:nth-child(2) { --n: 1; } .links li:nth-child(3) { --n: 2; } .links li:nth-child(4) { --n: 3; } .links li:nth-child(5) { --n: 4; } .links li:nth-child(6) { --n: 5; }
+}
+@keyframes bio-in { from { opacity: 0; transform: translateY(24px); } }
+
+@media (min-width: 960px) {
+  .bio { padding: 0; }
+  .bio .hero__bg { height: 100%; -webkit-mask-image: none; mask-image: none; }
+  .bio__in { max-width: 1120px; min-height: 720px; padding: 64px 28px; display: grid; grid-template-columns: 480px 1fr; grid-template-rows: auto auto; align-content: center; column-gap: 40px; row-gap: 36px; position: relative; }
+  .bio__head { text-align: left; }
+  .bio__logo { width: 199px; margin: 0 0 36px; }
+  .bio__title { margin: 0; max-width: none; font-size: 2.5rem; line-height: 1.12; }
+  .links { grid-column: 1; }
+  .bio__media { position: absolute; right: 0; bottom: 0; top: 0; width: 600px; height: auto; margin: 0; }
+  .bio__media .hero__pattern { width: 720px; top: 56%; }
+  .bio__model { width: 680px; top: auto; bottom: -110px; left: 52%; clip-path: none; }
+}
